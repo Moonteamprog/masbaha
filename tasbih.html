@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css" />
+
+
+</head>
+<style>
+    body{
+        background-color: rgb(87, 79, 74);
+        background-color:#28403D ;
+    }
+    #zkr{
+     width:270px;
+     margin:  auto;
+     margin-top: 50px;
+     height: 270px;
+     border-radius: 50%;
+     background:#182625;
+     background: #283538;
+     transition: 1s;
+     position: relative;   
+     /* outline: 5px rgb(54, 117, 57) solid; */
+     text-align: center;
+     font-size: 30px;
+     padding: 0 5px;
+      display: flex;
+     justify-content: center;
+     align-items: center; 
+     user-select: none;
+     color: rgb(199, 198, 196);
+
+     outline: 3px #455559 solid;
+    
+}
+#zkr:active {
+  transform: translate(0px,25px);
+  width: 250px;
+  height: 250px;
+}
+#add{
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: solid #455559 2px;
+  padding: 5px;
+  border-radius: 12px;
+  color: #13ae32;
+  color: rgb(199, 198, 196);
+background-color: #2F3D40;
+  font-size: 30px;
+  margin-top: 50px;
+  text-align: center;
+
+}
+.form-select{
+    direction: rtl;
+    margin: 20px auto;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+    color: rgb(199, 198, 196);
+
+    user-select: none;
+    padding:   7px  0   ;
+}
+#sel1{
+    font-size: 18px;
+    background-color: #2F3D40;
+    border-radius: 6px;
+    width: 250px;
+    outline: none;
+    text-align: center;
+    padding:   7px  0   ;
+}
+#reset{
+    width: 100px;
+    height: 100px;
+    background: #39585f;
+    margin: 30px auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    
+    text-align: center;
+    align-items: center;
+}
+@media screen and  (max-width:676px) {
+    .form-select , #sel1 {
+        display: flex;
+        flex-direction: column;
+        padding:   7px  0   ;
+
+    }
+}
+</style>
+<body>
+    
+
+    <div class="tas">
+        <!-- <h4>تسبيح</h4> -->
+
+        <div class="form-select"  id="form"  >
+            <label for="sel1">اختر الذكر:</label>
+            <select class="form-control"     id="sel1">
+              <option value="e1" id="e1"> سبحان الله</option>
+              <option value="e2" id="e2">الحمد لله</option>
+              <option value="e3" id="e3">الله أكبر</option>
+              <option value="e4" id="e4">لا اله الا الله</option>
+              <option value="e5" id="e5"> لا حول ولا قوة الا بالله العلي العظيم </option>
+              <option value="e6" id="e6"> حسبنا الله ونعم الوكيل </option>
+              <option value="e7" id="e7"> اللهم صلى وسلم على نبينا محمد </option>
+              <option value="e8" id="e8"> استغفر الله العظيم واتوب اليه </option>
+              <option value="e9" id="e9"> اللهم اني اعوذ بك من زوال نعمتك </option>
+              <option value="e0" id="e0"> اللهم إني أعوذ بك من جهد البلاء </option>
+    
+    
+            </select>
+        <div id="zkr"></div>
+        <div id="add">0</div>
+
+        <div  onclick="reset()" id="reset"><i class="fas fa-undo-alt"></i></div>
+
+        <div style="display: block; margin: 0  auto; text-align: center;  font-size: 18px; color: #a09797;   "  >   
+ 
+          © جميع الحقوق محفوظة لدى <a style="text-decoration: dashed; color: #108da3; margin: 0  auto;   text-align: center;  "   href="mailto:moon.team.prog@gmail.com">  MOON TEAM  </a>
+         
+          <img src="./my.ico" width="35px"   style="margin-bottom: -10px;" alt="">
+      
+        </div>
+
+      </div>
+
+
+
+      <!-- اضغط  هنا -->
+    
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script> 
+setInterval(() => {
+        zkr.innerHTML = document.getElementById(sel1.value).innerHTML
+}, 100);
+
+
+
+
+
+      
+    zkr.onclick= () => {
+         add.innerHTML=parseInt(add.innerHTML) + 1    };
+
+
+    function reset() { 
+        location.reload() ; }
+
+        
+</script>     
+
+
+
+</body>
+</html>
