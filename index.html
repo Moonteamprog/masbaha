@@ -89,6 +89,26 @@ background-color: #2F3D40;
     text-align: center;
     align-items: center;
 }
+    .wethar{
+  display: flex;
+  flex-direction: row;
+  padding: 5px ;
+  max-width: 100px;
+  background-color: #455559;
+  border-radius: 12px;
+  background-color: #39585f;
+  background-color: #2F3D40;
+  border: 2px #455559 solid;
+  margin-left: auto;
+  /* background-color: #333f33; */
+}
+#sun , #night{
+  margin: 10px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 20px;
+}
 @media screen and  (max-width:676px) {
     .form-select , #sel1 {
         display: flex;
@@ -103,7 +123,14 @@ background-color: #2F3D40;
 
     <div class="tas">
         <!-- <h4>تسبيح</h4> -->
+<div class="wethar">  
+  <div id="sun" onclick="changeBackground()">
+    <i class="far fa-sun"></i>
+  </div>
+  <div id="night" onclick="changeBackground2()">
 
+          <i class="far fa-moon"></i>    
+          </div>
         <div class="form-select"  id="form"  >
             <label for="sel1">اختر الذكر:</label>
             <select class="form-control"     id="sel1">
@@ -163,6 +190,14 @@ setInterval(() => {
     function reset() { 
         location.reload() ; }
 
+                  function changeBackground() {
+  document.body.style.backgroundColor = '#2F3D40';
+
+}
+function changeBackground2() {
+  document.body.style.backgroundColor = '#333f33';
+
+}
         
 </script>     
 
